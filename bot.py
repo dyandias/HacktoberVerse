@@ -1,17 +1,6 @@
 from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
 
 chatbot = ChatBot("Chatpot")
-trainer = ListTrainer(chatbot)
-
-trainer.train([
-    "Hi",
-    "Hello",
-    "How are you?",
-    "I'm doing well, thank you.",
-    "That's good to hear.",
-    "Thank you."
-])
 
 exit_conditions = (":q", "quit", "exit")
 while True:
@@ -20,3 +9,4 @@ while True:
         break
     else:
         print(f"🪴 {chatbot.get_response(query)}")
+        
